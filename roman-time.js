@@ -1,9 +1,10 @@
 function satisfies(number, max) {
-    return !isNaN(number) && number >= 0 && number < max;
+    return parseInt(number) == number && number >= 0 && number < max;
 }
 
+var messages = ["OK", "Wrong time! ", "Invalid arguments! "];
+
 function fail(errorCode) {
-    var messages = ["OK", "Wrong time! ", "Invalid arguments! "];
     console.log(messages[errorCode] + "Try roman-time.js -h to get the hint");
     process.exit(errorCode)
 }
